@@ -3,61 +3,127 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>Y_ACC_BAPI_TEST_DOCUMENT_AP</NAME>
+    <NAME>Y_ACC_BAPI_TEST_DOCUMENT_AP2</NAME>
     <SUBC>1</SUBC>
-    <APPL>*</APPL>
+    <APPL>F</APPL>
     <RSTAT>T</RSTAT>
-    <RLOAD>D</RLOAD>
+    <RLOAD>E</RLOAD>
     <FIXPT>X</FIXPT>
     <UCCHECK>X</UCCHECK>
    </PROGDIR>
    <TPOOL>
     <item>
      <ID>R</ID>
-     <ENTRY>Wrapper to test FI-AP Posting in Minimal BE Conditions</ENTRY>
-     <LENGTH>70</LENGTH>
+     <ENTRY>Wrapper to test adjusted BAPI FI-AP Posting .</ENTRY>
+     <LENGTH>45</LENGTH>
     </item>
     <item>
      <ID>S</ID>
-     <KEY>CHECK_A</KEY>
-     <ENTRY>Check Document</ENTRY>
+     <KEY>P_ACTION</KEY>
+     <ENTRY>S-Simulate/P-Post</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_ALNMBR</KEY>
+     <ENTRY>AllocNmbr</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_AMT</KEY>
+     <ENTRY>AmtDoccurLong</ENTRY>
      <LENGTH>38</LENGTH>
     </item>
     <item>
      <ID>S</ID>
-     <KEY>CHECK_L</KEY>
-     <ENTRY>Check Lines</ENTRY>
-     <LENGTH>38</LENGTH>
+     <KEY>P_AMTBSE</KEY>
+     <ENTRY>AmtBase</ENTRY>
+     <LENGTH>33</LENGTH>
     </item>
     <item>
      <ID>S</ID>
-     <KEY>DEST</KEY>
-     <ENTRY>Logical System</ENTRY>
-     <LENGTH>38</LENGTH>
+     <KEY>P_CUR</KEY>
+     <ENTRY>Currency</ENTRY>
+     <LENGTH>16</LENGTH>
     </item>
     <item>
      <ID>S</ID>
-     <KEY>POST</KEY>
-     <ENTRY>Post Document</ENTRY>
-     <LENGTH>38</LENGTH>
+     <KEY>P_CYCODE</KEY>
+     <ENTRY>CompCode</ENTRY>
+     <LENGTH>20</LENGTH>
     </item>
     <item>
      <ID>S</ID>
-     <KEY>REF_KEY</KEY>
-     <ENTRY>Reference Key</ENTRY>
-     <LENGTH>38</LENGTH>
+     <KEY>P_DOC_DT</KEY>
+     <ENTRY>DocDate</ENTRY>
+     <LENGTH>21</LENGTH>
     </item>
     <item>
      <ID>S</ID>
-     <KEY>REV_C</KEY>
-     <ENTRY>Check Reversal</ENTRY>
-     <LENGTH>38</LENGTH>
+     <KEY>P_GLACC</KEY>
+     <ENTRY>GlAccount</ENTRY>
+     <LENGTH>18</LENGTH>
     </item>
     <item>
      <ID>S</ID>
-     <KEY>REV_P</KEY>
-     <ENTRY>Reverse Document</ENTRY>
-     <LENGTH>38</LENGTH>
+     <KEY>P_GLACTX</KEY>
+     <ENTRY>TaxGlAccount</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_HDRTXT</KEY>
+     <ENTRY>HeaderTxt</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_ITMTXT</KEY>
+     <ENTRY>ItemText</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_PSTGDT</KEY>
+     <ENTRY>PstngDate</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_PYTRMS</KEY>
+     <ENTRY>PaymentTerms</ENTRY>
+     <LENGTH>21</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_QTY</KEY>
+     <ENTRY>Quantity</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_REFDCN</KEY>
+     <ENTRY>RefDocNo</ENTRY>
+     <LENGTH>28</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_UOM</KEY>
+     <ENTRY>BaseUom</ENTRY>
+     <LENGTH>28</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_VENDOR</KEY>
+     <ENTRY>Vendor</ENTRY>
+     <LENGTH>14</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_WBS</KEY>
+     <ENTRY>WbsElement</ENTRY>
+     <LENGTH>18</LENGTH>
     </item>
    </TPOOL>
    <I18N_TPOOL>
