@@ -9,6 +9,146 @@
    </INCLUDES>
    <FUNCTIONS>
     <item>
+     <FUNCNAME>Y_BAPI_ACC_DOCUMENT_POST_DIV</FUNCNAME>
+     <SHORT_TEXT>Y_BAPI_ACC_DOCUMENT_POST_DIV</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>DOCUMENTHEADER</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BAPIACHE09</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>OBJ_KEY</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BAPIACHE09-OBJ_KEY</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>ACCOUNTGL</PARAMETER>
+       <DBSTRUCT>BAPIACGL09</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>ACCOUNTPAYABLE</PARAMETER>
+       <DBSTRUCT>BAPIACAP09</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>ACCOUNTTAX</PARAMETER>
+       <DBSTRUCT>BAPIACTX09</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>CURRENCYAMOUNT</PARAMETER>
+       <DBSTRUCT>BAPIACCR09</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>CRITERIA</PARAMETER>
+       <DBSTRUCT>BAPIACKEC9</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>DOCUMENTHEADER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Header</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OBJ_KEY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Object key</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ACCOUNTGL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>G/L account item</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ACCOUNTPAYABLE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Vendor Item</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ACCOUNTTAX</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tax item</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CURRENCYAMOUNT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Currency Items</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CRITERIA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Posting in accounting: CO-PA acct assignment characteristics</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Parameter</STEXT>
+       <INDEX> 008</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Y_PARAM_ACC_DOCUMENT_POST_DIV</FUNCNAME>
+     <SHORT_TEXT>Y_param_acc_document_post_div</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_LIMIT</PARAMETER>
+       <DEFAULT>990</DEFAULT>
+       <REFERENCE>X</REFERENCE>
+       <TYP>I</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_DOC_TYPE</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BAPIACHE09-DOC_TYPE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IS_INTERMEDIATE_ACC</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BAPIACGL09</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_LIMIT</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_DOC_TYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Document type</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IS_INTERMEDIATE_ACC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>G/L account item</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
      <FUNCNAME>Y_RFC_POST_AP</FUNCNAME>
      <REMOTE_CALL>R</REMOTE_CALL>
      <SHORT_TEXT>Wrapper for AP posting</SHORT_TEXT>

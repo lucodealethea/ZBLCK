@@ -2,6 +2,12 @@ FUNCTION-POOL zfm_fico_for_blck.            "MESSAGE-ID ..
 
 * INCLUDE LZFM_FICO_FOR_BLCKD...             " Local class definition
 
+*Function group TOP include
+DATA:
+  gv_limit            TYPE  i,
+  gv_doc_type         TYPE  bapiache09-doc_type,
+  gs_intermediate_acc TYPE  BAPIACGL09.
+
 DATA:
   gd_documentheader    LIKE bapiache09,
   it_accountgl         LIKE TABLE OF bapiacgl09 WITH HEADER LINE,
