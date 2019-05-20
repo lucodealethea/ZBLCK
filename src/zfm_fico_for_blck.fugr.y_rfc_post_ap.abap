@@ -15,6 +15,7 @@ DATA:
   ref_key LIKE bapiache01-obj_key VALUE 'TEST000001BAPICALL',
   dest    LIKE bdi_logsys-logsys  VALUE '          '.
 
+DATA lt_return         TYPE STANDARD TABLE OF bapiret2.
 
 DATA:
   check_action TYPE c VALUE 'X'.
@@ -69,7 +70,9 @@ IF documentheader-action = 'S'.
       accountpayable    = it_accountpayable
       accounttax        = it_accounttax
       currencyamount    = it_currencyamount
-      return            = return.
+      return            = lt_return.
+
+      APPEND LINES OF lt_return TO return.
 
 ELSEIF documentheader-action = 'P'.
 
@@ -86,11 +89,30 @@ ELSEIF documentheader-action = 'P'.
         accountpayable    = it_accountpayable
         accounttax        = it_accounttax
         currencyamount    = it_currencyamount
-        return            = return.
+        return            = lt_return.
+
+APPEND LINES OF lt_return TO return.
+
+    LOOP AT lt_return ASSIGNING FIELD-SYMBOL(<ls_return>) WHERE type CA 'AEX'.
+      EXIT.
+    ENDLOOP.
+
+    IF sy-subrc = 0.
+      DATA(lv_error_occured) = abap_true.
+      EXIT.
+    ENDIF.
+
+  CASE lv_error_occured.
+    WHEN abap_true.
+      CLEAR obj_key.
+      CALL FUNCTION 'BAPI_TRANSACTION_ROLLBACK'.
+    WHEN abap_false.
+      CALL FUNCTION 'BAPI_TRANSACTION_COMMIT'
+        EXPORTING
+          wait = abap_true.
+  ENDCASE.
 
 
-* why not here ? COMMIT WORK.
 ENDIF.
-COMMIT WORK.
-BREAK-POINT.
+
 ENDFUNCTION.

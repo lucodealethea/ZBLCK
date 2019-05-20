@@ -10,6 +10,7 @@
    <FUNCTIONS>
     <item>
      <FUNCNAME>Y_RFC_POST_AP</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
      <SHORT_TEXT>Wrapper for AP posting</SHORT_TEXT>
      <IMPORT>
       <RSIMP>
