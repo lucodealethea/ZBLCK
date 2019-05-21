@@ -11,120 +11,2107 @@
     <FIXPT>X</FIXPT>
     <UCCHECK>X</UCCHECK>
    </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Wrapper to test FI-AP Posting in Minimal BE Conditions</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>CHECK_A</KEY>
+     <ENTRY>Check Document</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>CHECK_L</KEY>
+     <ENTRY>Check Lines</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>DEST</KEY>
+     <ENTRY>Logical System</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>POST</KEY>
+     <ENTRY>Post Document</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>REF_KEY</KEY>
+     <ENTRY>Reference Key</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>REV_C</KEY>
+     <ENTRY>Check Reversal</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>REV_P</KEY>
+     <ENTRY>Reverse Document</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+   </TPOOL>
    <I18N_TPOOL>
     <item>
      <LANGUAGE>1</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>测试访问 BAPI 会计凭证</ENTRY>
+       <LENGTH>36</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>检查凭证</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>检查行</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>逻辑系统</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>记帐凭证</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>参考代码</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>检查冲销</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>冲销凭证</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>2</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>ทดสอบการเข้าถึงเอกสารการบัญชีของ BAPI</ENTRY>
+       <LENGTH>37</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>ตรวจสอบเอกสาร</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>ตรวจสอบบรรทัด</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>ระบบแบบลอจิกคัล</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>ผ่านรายการเอกสาร</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>คีย์อ้างอิง</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>ตรวจสอบการกลับรายการ</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>กลับรายการเอกสาร</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>3</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>BAPI 회계전표 테스트 접근</ENTRY>
+       <LENGTH>36</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>전표 점검</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>라인 점검</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>논리 시스템</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>전표 전기</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>참조 키</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>역분개 점검</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>전표 취소</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>4</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Apelare test BAPI Accounting Document</ENTRY>
+       <LENGTH>37</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Verificare document</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Verificare linii</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Sistem logic</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Înregistrare document</ENTRY>
+       <LENGTH>29</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Cheie de referinţă</ENTRY>
+       <LENGTH>26</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Verificare stornare</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Stornare document</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>5</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Priklic testa BAPI dokument računovodstva</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Kontrola dokumenta</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Kontrola vrstic</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Logični sistem</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Knjiženje dokumenta</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Referenčni ključ</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Kontrola storna</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Storno dokumenta</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>6</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Probni pristup BAPI računovodstvenom dokumentu</ENTRY>
+       <LENGTH>46</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Provjeri dokument</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Provjeri redove</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Logički sustav</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Knjiži dokument</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Referentni Ključ</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Provjeri storno</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Storniraj dokument</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>7</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Capaian Ujian BAPI Dokumen Perakaunan</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Semak Dokumen</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Semak Baris</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Sistem Logik</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Pos Dokumen</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Kod Rujukan</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Semak Balikan</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Dokumen Balikan</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>8</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Тестовий доступ до бухгалтерського документа BAPI</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Перевірити документ</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Перевірити рядки</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Логічна система</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Провести документ</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Ключ посилання</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Перевірити сторнування</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Сторнувати документ</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>9</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>BAPI majandusarvestusedokumendi juurdepääsu testimine</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Dokumendikontroll</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Ridade kontroll</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Loogiline süsteem</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Dokumendi kirjendamine</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Viitevõti</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Tühistamise kontroll</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Tühista dokument</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>A</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>فحص وصول مستند المحاسبة BAPI</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>فحص المستند</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>فحص الأسطر</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>نظام منطقي</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>ترحيل المستند</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>مفتاح المرجع</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>فحص العكس</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>مستند الإلغاء</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>B</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>מבחן גישה מסמך חשבונאי BAPI</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>בדיקת מסמך</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>שורות מסמך</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>מערכת לוגית</ENTRY>
+       <LENGTH>38</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>רשום מסמך</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>מפתח סימוכין</ENTRY>
+       <LENGTH>38</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>בדיקת סטורנו</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>מסמך סטורנו</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>C</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Vyvolání testu účet.dokumentu</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Kontrola dokladu</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Kontrola řádek</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Logický systém</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Zaúčtování dokladu</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Referenční klíč</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Kontrola storna</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Stornování dokladu</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>D</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Wrapper to test FI-AP Posting in Minimal BE Conditions</ENTRY>
+       <LENGTH>54</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Beleg prüfen</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Zeilen prüfen</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Logisches System</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Beleg Buchen</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Referenzschlüssel</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Storno prüfen</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Beleg stornieren</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>F</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Appel test BAPI pièce comptable</ENTRY>
+       <LENGTH>31</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Contrôler la pièce</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Contrôler les lignes</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Système logique</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Enregistrer pièce</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Clé de référence</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Contrôler contre-passation</ENTRY>
+       <LENGTH>34</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Annuler la pièce</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>G</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Δοκ.Πρόσβαση Λογιστικής Εγγραφής BAPI</ENTRY>
+       <LENGTH>37</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Ελεγχος Παραστατικού</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Ελεγχος Γραμμών</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Λογικό Σύστημα</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Καταχώριση Εγγραφής</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Κλειδί Αναφοράς</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Ελεγχος Αντιλογισμού</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Αντιλογισμός Παραστατικού</ENTRY>
+       <LENGTH>33</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>H</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Tesztfelhívás: BAPI AcctngDocument</ENTRY>
+       <LENGTH>34</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Bizonylat ellenőrzése</ENTRY>
+       <LENGTH>29</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Sorok ellenőrzése</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Logikai rendszer</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Bizonylat könyvelése</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Referenciakulcs</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Stornó ellenőrzése</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Bizonylatstornó</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>I</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Richiamo test BAPI documento contabile</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Controllare documento</ENTRY>
+       <LENGTH>29</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Controllare righe</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Sistema logico</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Registrare documento</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Chiave di riferimento</ENTRY>
+       <LENGTH>29</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Controllare storno</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Stornare documento</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>J</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>BAPI 会計伝票テストアクセス</ENTRY>
+       <LENGTH>36</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>伝票チェック</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>行チェック</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>論理システム</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>伝票転記</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>参照キー</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>反対仕訳チェック</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>伝票反対仕訳</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>K</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Testkald af BAPI AcctngDocument</ENTRY>
+       <LENGTH>31</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Kontroller bilag</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Kontroller linier</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Logisk system</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Bogfør bilag</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Referencenøgle</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Kontroller annullering</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Annuller bilag</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>L</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Wywołanie testu BAPI dokum. księgow.</ENTRY>
+       <LENGTH>36</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Sprawdzenie dokumentu</ENTRY>
+       <LENGTH>29</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Sprawdzanie linii</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>System logiczny</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Księgowanie dokumentu</ENTRY>
+       <LENGTH>29</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Klucz referencyjny</ENTRY>
+       <LENGTH>26</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Sprawdzanie storna</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Stornowanie dokumentu</ENTRY>
+       <LENGTH>29</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>M</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>測試存取 BAPI 會計文件</ENTRY>
+       <LENGTH>36</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>檢查文件</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>檢查行</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>邏輯系統</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>過帳文件</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>參考碼</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>檢查迴轉</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>迴轉文件</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>N</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Testoproep BAPI-boekh.doc.</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Document controleren</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Regels controleren</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Logisch systeem</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Document boeken</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Referentiecode</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Storno controleren</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Document storneren</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>O</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Testanfop BAPI regnskapsbilag</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Kontroller bilag</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Kontr. linjer</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Logisk system</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Konter bilag</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Referansenøkkel</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Kontr. tilbakef.</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Tilbakefør bilag</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>P</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Chamada teste BAPI documento contábil</ENTRY>
+       <LENGTH>37</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Verificar documento</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Verificar linhas</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Sistema lógico</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Lançar documento</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Chave de referência</ENTRY>
+       <LENGTH>27</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Verificar estorno</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Estornar documento</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>Q</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Vyvolanie testu BAPI - účtovný dokument</ENTRY>
+       <LENGTH>39</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Kontrola dokladu</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Kontrola riadkov</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Logický systém</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Účtovanie dokladu</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Referenčný kľúč</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Kontrola storna</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Storno dokladu</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>R</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>ТестВызов BAPI бухгалтерский документ</ENTRY>
+       <LENGTH>37</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Проверить документ</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Проверка строк</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Логическая система</ENTRY>
+       <LENGTH>26</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Проводка документа</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Ссылочный ключ</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Проверка сторно</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Сторнировать документ</ENTRY>
+       <LENGTH>29</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>S</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Llamada test BAPI documento contable</ENTRY>
+       <LENGTH>36</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Verificar documento</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Verificar líneas</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Sistema lógico</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Contab.documento</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Clave referencia</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Verificar anulación</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Anular documento</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>T</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>BAPI AcctngDocument deneme çağrısı</ENTRY>
+       <LENGTH>34</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Belgeyi kontrol et</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Satırları kontrol et</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Mantıksal sistem</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Belge kaydı</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Referans anahtar</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Ters kaydı kontrol et</ENTRY>
+       <LENGTH>29</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Belgeyi ters kaydet</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>U</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Testikutsu BAPI AcctngDocument</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Tarkista tosite</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Tarkista rivit</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Looginen järjestelmä</ENTRY>
+       <LENGTH>28</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Kirjaa tosite</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Viiteavain</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Tarkista peruutus</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Peruuta tosite</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>V</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Testanrop BAPI bokföringsdokument</ENTRY>
+       <LENGTH>33</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Kontrollera dokument</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Kontrollera rader</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Logiskt system</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Boka dokument</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Referensnyckel</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Kontrollera annullering</ENTRY>
+       <LENGTH>31</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Annullera dokument</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>W</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Тест достъп BAPI счетоводен документ</ENTRY>
+       <LENGTH>36</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Проверка на документ</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Проверка на редове</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Логическа система</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Осчетоводяване на документ</ENTRY>
+       <LENGTH>34</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Ключ на референция</ENTRY>
+       <LENGTH>26</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Проверка на сторниране</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Сторниране на документ</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>X</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>BAPI apskaitos dokumento prieigos testas</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Tikrinti dokumentą</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Tikrinti eilutes</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Loginė sistema</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Registruoti dokumentą</ENTRY>
+       <LENGTH>29</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Nuorodos raktas</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Tikrinti anuliavimą</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Anuliuoti dokumentą</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>Y</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Testa piekļuve/BAPI grāmatvedības dokuments</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Pārbaudīt dokumentu</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Pārbaudīt rindas</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Loģiskā sistēma</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Iegrāmatot dokumentu</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Atsauces kods</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Pārbaudīt stornēšanu</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Stornēt dokumentu</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>c</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Crida de prova BAPI document de comptabilitat</ENTRY>
+       <LENGTH>45</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Verificar document</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Verificar línies</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Sistema lògic</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Comptabilitzar document</ENTRY>
+       <LENGTH>31</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Clau de referència</ENTRY>
+       <LENGTH>26</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Verificar anul·lació</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Anul·lar document</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>d</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Probni pristup BAPI dokumentu računovodstva</ENTRY>
+       <LENGTH>43</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Proveri dokument</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Proveri redove</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Logički sistem</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Knjiži dokument</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Referentni ključ</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Proveri storno</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Storniraj dokument</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>묩</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>BAPI लेखांकन दस्‍तावेज़ पहुंच का परीक्षण करें</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>दस्तावेज़ जांचें</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>पंक्तियां जांचें</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>तार्किक सिस्टम</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>दस्तावेज़ पोस्ट करें</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>संदर्भ कुंजी</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>रिवर्सल जांचें</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>दस्तावेज़ विपरीत करें</ENTRY>
+       <LENGTH>29</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>뱋</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>BAPI бухгалтерлік құжатын ашуға сынақ рұқсат</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Құжатты тексеру</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Жолдарды тексеру</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Логикалық жүйе</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Құжатты өткізу</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Сілтеме кілт</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Түзетуді тексеру</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Құжатты түзету</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
     <item>
      <LANGUAGE>쁩</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Truy cập thử chứng từ kế toán BAPI</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_A</KEY>
+       <ENTRY>Kiểm tra chứng từ</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>CHECK_L</KEY>
+       <ENTRY>Kiểm tra dòng</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>DEST</KEY>
+       <ENTRY>Hệ thống logic</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>POST</KEY>
+       <ENTRY>Ghi sổ Chứng từ</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REF_KEY</KEY>
+       <ENTRY>Khoá tham chiếu</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_C</KEY>
+       <ENTRY>Kiểm tra ghi đảo</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>REV_P</KEY>
+       <ENTRY>Ghi đảo chứng từ</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
    </I18N_TPOOL>
   </asx:values>
