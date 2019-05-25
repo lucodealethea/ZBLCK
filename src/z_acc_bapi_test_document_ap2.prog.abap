@@ -1,12 +1,12 @@
 *&---------------------------------------------------------------------*
-*& Report  Y_ACC_BAPI_TEST_DOCUMENT_AP2                                *
+*& Report  Z_ACC_BAPI_TEST_DOCUMENT_AP2                                *
 *&                                                                     *
 *&---------------------------------------------------------------------*
 *& Test report, calls BAPI AcctngDocument                              *
 *&                                                                     *
 *&---------------------------------------------------------------------*
 
-REPORT  y_acc_bapi_test_document_ap2                  .
+REPORT  z_acc_bapi_test_document_ap2                  .
 
 SELECTION-SCREEN BEGIN OF BLOCK bl01 .
 
@@ -19,7 +19,7 @@ SELECTION-SCREEN ULINE.
 PARAMETERS:
         p_cycode       TYPE zbapi_acc_post_ap-comp_code DEFAULT 'BE10',
         p_doc_dt        TYPE zbapi_acc_post_ap-doc_date DEFAULT sy-datum,
-        p_pstgdt      TYPE TIMESTAMPL DEFAULT '20190509000000.0000000',               "zbapi_acc_post_ap-pstng_date DEFAULT sy-datum,
+        p_pstgdt      TYPE zbapi_acc_post_ap-pstng_date DEFAULT sy-datum,
         p_refdcn      TYPE zbapi_acc_post_ap-ref_doc_no DEFAULT 'TS00000011PZIN',
         p_glacc      TYPE zbapi_acc_post_ap-gl_account DEFAULT '6156000000',
         p_glactx   TYPE zbapi_acc_post_ap-gl_account_tx DEFAULT '4110000000',
@@ -72,8 +72,7 @@ MOVE:
      p_amt    to in_documentheader-amt_doccur_long,
      p_amtbse to in_documentheader-amt_base.
 .
-
-CALL FUNCTION 'Y_RFC_POST_AP'
+CALL FUNCTION 'Z_RFC_POST_AP'
   EXPORTING
     documentheader       = in_documentheader
 IMPORTING

@@ -1,4 +1,4 @@
-FUNCTION y_rfc_post_ap.
+FUNCTION z_rfc_post_ap.
 *"----------------------------------------------------------------------
 *"*"Local Interface:
 *"  IMPORTING

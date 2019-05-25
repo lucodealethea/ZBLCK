@@ -1,10 +1,10 @@
-@AbapCatalog.sqlViewName: 'ZV_FIGL_HDR'
+@AbapCatalog.sqlViewName: 'ZBLCK_FIDOCS'
 @AbapCatalog.compiler.compareFilter: true
 @AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #NOT_REQUIRED
-@EndUserText.label: 'Joining BKPF BSET BSEG'
+@EndUserText.label: 'Based on BKPF-BSEG_BSET'
 @OData.publish: true
-define view ZTV_BKPF_BSEG
+define view ZTV_FIGL_DOC_ITEMS
 as select from bseg as D 
 inner join bkpf as H 
 on D.mandt = H.mandt
@@ -51,7 +51,6 @@ D.dmbtr as AMT_BASE
 //D.mwskz as TAX_CODE,
 //D.kostl as ACCT_KEY,
 //T.kschl as COND_KEY,
-
-
 }
-where H.blart = 'KB' or H.blart = 'DB'
+
+where ( H.blart = 'KB' or H.blart = 'DB' ) and H.awtyp = 'BKPFF'

@@ -14,11 +14,13 @@ DATA:
   it_accounttax        LIKE TABLE OF bapiactx09 WITH HEADER LINE,
   it_currencyamount    LIKE TABLE OF bapiaccr09 WITH HEADER LINE,
   lt_return            LIKE TABLE OF bapiret2   WITH HEADER LINE,
-  it_accountpayable    LIKE TABLE OF bapiacap09 WITH HEADER LINE.
+  it_accountpayable    LIKE TABLE OF bapiacap09 WITH HEADER LINE,
+  it_accountreceivable LIKE TABLE OF bapiacar09 WITH HEADER LINE.
 
 DATA: lt_mwdat TYPE STANDARD TABLE OF rtax1u15,
       wa_mwdat TYPE rtax1u15,
       wa_amount TYPE bapidoccur_31,
+      sign type i, "1 or -1
       wa_orig_amt_doccur_long TYPE bapidoccur_31,
       wa_orig_amt_base TYPE BAPIAMTBASE.
 
@@ -41,7 +43,7 @@ FORM fill_header.
 * GD_DOCUMENTHEADER-TRANS_DATE =
 * GD_DOCUMENTHEADER-VALUE_DATE =
 * GD_DOCUMENTHEADER-FIS_PERIOD =
- gd_documentheader-doc_type   = 'KB'.
+*  gd_documentheader-doc_type   = 'KB'.
 * GD_DOCUMENTHEADER-COMPO_ACC  =
   gd_documentheader-bus_act    = 'RFBU'.
 
@@ -59,7 +61,7 @@ FORM fill_accountgl.
 * IT_ACCOUNTGL-REF_KEY_1      =
 * IT_ACCOUNTGL-REF_KEY_2      =
 * IT_ACCOUNTGL-REF_KEY_3      =
-  it_accountgl-tax_code       = 'V3'.
+*  it_accountgl-tax_code       = 'V3'.
 * IT_ACCOUNTGL-ACCT_KEY       =
 * IT_ACCOUNTGL-TAXJURCODE     =
 * IT_ACCOUNTGL-CSHDIS_IND     =
@@ -160,50 +162,28 @@ FORM fill_accountap.
 
 *  CLEAR it_accountpayable.
   it_accountpayable-itemno_acc = 1.
-* it_accountpayable-gl_account
-* it_accountpayable-ref_key_1
-* it_accountpayable-ref_key_2
-* it_accountpayable-ref_key_3
-* it_accountpayable-comp_code
-* it_accountpayable-bus_area
   it_accountpayable-pmnttrms = 'NT30'.
-* it_accountpayable-bline_date
-* it_accountpayable-dsct_days1
-* it_accountpayable-dsct_days2
-* it_accountpayable-netterms
-* it_accountpayable-dsct_pct1
-* it_accountpayable-dsct_pct2
-* it_accountpayable-pymt_meth
-* it_accountpayable-pmtmthsupl
-* it_accountpayable-pmnt_block
-* it_accountpayable-scbank_ind
-* it_accountpayable-supcountry
-* it_accountpayable-supcountry_iso
-* it_accountpayable-bllsrv_ind
-* it_accountpayable-po_sub_no
-* it_accountpayable-po_checkdg
-* it_accountpayable-po_ref_no
-* it_accountpayable-w_tax_code
-* it_accountpayable-businessplace
-* it_accountpayable-sectioncode
-* it_accountpayable-instr1
-* it_accountpayable-instr2
-* it_accountpayable-instr3
-* it_accountpayable-instr4
-* it_accountpayable-branch
-* it_accountpayable-pymt_cur
-* it_accountpayable-pymt_amt
-* it_accountpayable-pymt_cur_iso
-* it_accountpayable-sp_gl_ind
 
   APPEND it_accountpayable.
 
 ENDFORM.                    "fill_accountap
+*---------------------------------------------------------------------*
+*       FORM fill_ar                                                  *
+*---------------------------------------------------------------------*
+FORM fill_accountar.
+
+*  CLEAR it_accountreceivable.
+  it_accountreceivable-itemno_acc = 1.
+  it_accountreceivable-pmnttrms = 'NT30'.
+
+  APPEND it_accountreceivable.
+
+ENDFORM.                    "fill_accountar
 
 *---------------------------------------------------------------------*
-*       FORM fill_tax                                                 *
+*       FORM fill_tax_ap                                              *
 *---------------------------------------------------------------------*
-FORM fill_accounttax.
+FORM fill_accounttax_ap.
 
   CLEAR: it_accounttax-tax_rate.
   it_accounttax-itemno_acc = 3.
@@ -220,10 +200,33 @@ FORM fill_accounttax.
 * IT_ACCOUNTTAX-taxjurcode_level
   APPEND it_accounttax.
 
-ENDFORM.                    "fill_accounttax
+ENDFORM.                    "fill_accounttax_ap
 
 *---------------------------------------------------------------------*
-*       FORM fill_currencyamount                                      *
+*       FORM fill_tax_ar                                              *
+*---------------------------------------------------------------------*
+FORM fill_accounttax_ar.
+
+  CLEAR: it_accounttax-tax_rate.
+  it_accounttax-itemno_acc = 3.
+
+  it_accounttax-tax_code   = 'A3'.
+  it_accounttax-acct_key   = 'MWS'.
+* it_accounttax-ITEMNO_TAX = '2'.
+* IT_ACCOUNTTAX-TAXJURCODE =
+  it_accounttax-cond_key   = 'MWAS'.
+* IT_ACCOUNTTAX-TAX_RATE   =
+* IT_ACCOUNTTAX-TAX_DATE   =
+* IT_ACCOUNTTAX-STAT_CON   =
+* IT_ACCOUNTTAX-taxjurcode_deep
+* IT_ACCOUNTTAX-taxjurcode_level
+  APPEND it_accounttax.
+
+ENDFORM.                    "fill_accounttax_ar
+
+
+*---------------------------------------------------------------------*
+*       FORM fill_currencyamount_1                                    *
 *---------------------------------------------------------------------*
 FORM fill_currencyamount_1.
 
@@ -246,11 +249,10 @@ READ TABLE lt_mwdat INDEX 1 INTO wa_mwdat.
 MOVE wa_mwdat-msatz TO it_accounttax-tax_rate.
 ENDIF.
 
-wa_amount = -1 * ( wa_orig_amt_base + ( ( wa_orig_amt_base * it_accounttax-tax_rate ) / 100 ) ).
+wa_amount = sign * ( wa_orig_amt_base + ( ( wa_orig_amt_base * it_accounttax-tax_rate ) / 100 ) ).
 
   it_currencyamount-amt_doccur_long = wa_amount.
-
-  it_currencyamount-amt_base = -1 * it_currencyamount-amt_base.
+  it_currencyamount-amt_base = sign * it_currencyamount-amt_base.
   it_currencyamount-itemno_acc   = 1.
   it_currencyamount-curr_type    = '00'.
 * IT_CURRENCYAMOUNT-CURRENCY_ISO =
@@ -265,8 +267,8 @@ ENDFORM.                    "fill_currencyamount_1
 FORM fill_currencyamount_2.
   CLEAR: it_currencyamount-itemno_acc, wa_amount.
   it_currencyamount-amt_doccur_long = wa_orig_amt_doccur_long.
-* was -1 in line 2
-  it_currencyamount-amt_base = -1 * it_currencyamount-amt_base.
+* was -1 in line 1
+  it_currencyamount-amt_base = sign * it_currencyamount-amt_base.
   it_currencyamount-itemno_acc   = 2.
   it_currencyamount-curr_type    = '00'.
 * IT_CURRENCYAMOUNT-CURRENCY_ISO =
@@ -277,6 +279,22 @@ FORM fill_currencyamount_2.
 * it_currencyamount-disc_amt     =
   APPEND it_currencyamount.
 ENDFORM.                    "fill_currencyamount_2
+
+FORM fill_currencyamount_2ar.
+  CLEAR: it_currencyamount-itemno_acc, wa_amount.
+  it_currencyamount-amt_doccur_long = sign * wa_orig_amt_doccur_long.
+* was -1 in line 1
+  it_currencyamount-amt_base = sign * it_currencyamount-amt_base.
+  it_currencyamount-itemno_acc   = 2.
+  it_currencyamount-curr_type    = '00'.
+* IT_CURRENCYAMOUNT-CURRENCY_ISO =
+* IT_CURRENCYAMOUNT-EXCH_RATE    =
+*  it_currencyamount-amt_base    =
+* IT_CURRENCYAMOUNT-DISC_BASE    =
+*  it_currencyamount-exch_rate_v =
+* it_currencyamount-disc_amt     =
+  APPEND it_currencyamount.
+ENDFORM.                    "fill_currencyamount_2ar
 
 FORM fill_currencyamount_3.
   CLEAR: it_currencyamount-itemno_acc, wa_amount, it_currencyamount-amt_base.
@@ -293,3 +311,20 @@ FORM fill_currencyamount_3.
   APPEND it_currencyamount.
 
 ENDFORM.                    "fill_currencyamount_3
+
+
+FORM fill_currencyamount_3ar.
+  CLEAR: it_currencyamount-itemno_acc, wa_amount, it_currencyamount-amt_base.
+  it_currencyamount-amt_base_long = wa_orig_amt_base.
+  wa_amount = ( ( wa_orig_amt_base * wa_mwdat-msatz ) / 100 ).
+  it_currencyamount-amt_doccur_long = sign * wa_amount.
+  it_currencyamount-itemno_acc   = 3.
+  it_currencyamount-curr_type    = '00'.
+* it_currencyamount-currency_iso =
+* IT_CURRENCYAMOUNT-EXCH_RATE    =
+* IT_CURRENCYAMOUNT-DISC_BASE    =
+* IT_CURRENCYAMOUNT-EXCH_RATE_V  =
+* it_currencyamount-disc_amt     =
+  APPEND it_currencyamount.
+
+ENDFORM.                    "fill_currencyamount_3ar

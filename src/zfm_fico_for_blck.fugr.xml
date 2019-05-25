@@ -211,6 +211,195 @@
       </RSFDO>
      </DOCUMENTATION>
     </item>
+    <item>
+     <FUNCNAME>Y_RFC_POST_AR</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Wrapper for AP posting</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>DOCUMENTHEADER</PARAMETER>
+       <DBFIELD>ZBAPI_ACC_POST_AR</DBFIELD>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>OBJ_TYPE</PARAMETER>
+       <DBFIELD>BAPIACHE09-OBJ_TYPE</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>OBJ_KEY</PARAMETER>
+       <DBFIELD>BAPIACHE09-OBJ_KEY</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>OBJ_SYS</PARAMETER>
+       <DBFIELD>BAPIACHE09-OBJ_SYS</DBFIELD>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>DOCUMENTHEADER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Header</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OBJ_TYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Reference procedure</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OBJ_KEY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Reference key</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OBJ_SYS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Logical system of source document</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return parameter</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_RFC_POST_AP</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Wrapper for AP posting</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>DOCUMENTHEADER</PARAMETER>
+       <DBFIELD>ZBAPI_ACC_POST_AP</DBFIELD>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>OBJ_TYPE</PARAMETER>
+       <DBFIELD>BAPIACHE09-OBJ_TYPE</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>OBJ_KEY</PARAMETER>
+       <DBFIELD>BAPIACHE09-OBJ_KEY</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>OBJ_SYS</PARAMETER>
+       <DBFIELD>BAPIACHE09-OBJ_SYS</DBFIELD>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>DOCUMENTHEADER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Header</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OBJ_TYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Reference procedure</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OBJ_KEY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Reference key</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OBJ_SYS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Logical system of source document</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return parameter</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_RFC_POST_AR</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Wrapper for AP posting</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>DOCUMENTHEADER</PARAMETER>
+       <DBFIELD>ZBAPI_ACC_POST_AR</DBFIELD>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>OBJ_TYPE</PARAMETER>
+       <DBFIELD>BAPIACHE09-OBJ_TYPE</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>OBJ_KEY</PARAMETER>
+       <DBFIELD>BAPIACHE09-OBJ_KEY</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>OBJ_SYS</PARAMETER>
+       <DBFIELD>BAPIACHE09-OBJ_SYS</DBFIELD>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>DOCUMENTHEADER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Header</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OBJ_TYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Reference procedure</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OBJ_KEY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Reference key</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OBJ_SYS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Logical system of source document</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return parameter</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
    </FUNCTIONS>
   </asx:values>
  </asx:abap>
