@@ -3,22 +3,14 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_ZBLCK_FIAP_01_DPC_EXT</CLSNAME>
+    <CLSNAME>ZCL_ZBLCK_FIAR_MPC_EXT</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Data Provider Secondary Class</DESCRIPT>
+    <DESCRIPT>ZCL_ZBLCK_FIAR_MPC_EXT</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>
     <UNICODE>X</UNICODE>
    </VSEOCLASS>
-   <DESCRIPTIONS>
-    <SEOCOMPOTX>
-     <CLSNAME>ZCL_ZBLCK_FIAP_01_DPC_EXT</CLSNAME>
-     <CMPNAME>_RAISE_BAPI_MESSAGES</CMPNAME>
-     <LANGU>E</LANGU>
-     <DESCRIPT>Raises messages created by BAPI</DESCRIPT>
-    </SEOCOMPOTX>
-   </DESCRIPTIONS>
   </asx:values>
  </asx:abap>
 </abapGit>

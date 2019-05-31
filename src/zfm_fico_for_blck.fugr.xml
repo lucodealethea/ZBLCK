@@ -275,6 +275,61 @@
      </DOCUMENTATION>
     </item>
     <item>
+     <FUNCNAME>Z_RFC_POST_ACTALLOC</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Wrapper RFC to BAPI_ACC_ACTIVITY_ALLOC</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>DOCUMENTHEADER</PARAMETER>
+       <TYP>ZBAPI_ACTALLOC_POST</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IGNORE_WARNINGS</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BAPIIW-IGNWARN</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>DOC_NO</PARAMETER>
+       <TYP>BAPIDOCHDRP-DOC_NO</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>DOCUMENTHEADER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Post act. allocation BAPI_ACC_ACTIVITY_ALLOC_POST</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IGNORE_WARNINGS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ignore Warnings</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DOC_NO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Document Number</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Error Message Table</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
      <FUNCNAME>Z_RFC_POST_AP</FUNCNAME>
      <REMOTE_CALL>R</REMOTE_CALL>
      <SHORT_TEXT>Wrapper for AP posting</SHORT_TEXT>

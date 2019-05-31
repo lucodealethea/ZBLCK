@@ -10,6 +10,9 @@ DATA:
 
 DATA:
   gd_documentheader    LIKE bapiache09,
+  gd_actdocumentheader LIKE BAPIDOCHDRP,
+  it_doc_items         LIKE TABLE OF BAPIAAITM WITH HEADER LINE,
+  it_criteria          LIKE TABLE OF BAPIACKECR WITH HEADER LINE,
   it_accountgl         LIKE TABLE OF bapiacgl09 WITH HEADER LINE,
   it_accounttax        LIKE TABLE OF bapiactx09 WITH HEADER LINE,
   it_currencyamount    LIKE TABLE OF bapiaccr09 WITH HEADER LINE,

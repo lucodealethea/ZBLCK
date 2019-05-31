@@ -24,7 +24,7 @@ DATA:
 CLEAR:  sign, lv_exists_already, gd_documentheader, wa_orig_amt_base, wa_orig_amt_doccur_long.
 * the following fields remain initialized, used for the return in the service
 CLEAR: documentheader-obj_type, documentheader-obj_key, documentheader-ac_doc_no, documentheader-itemno_acc.
-REFRESH:  it_accountgl, it_currencyamount, it_accountpayable, it_accounttax.
+REFRESH:  lt_return, it_accountgl, it_currencyamount, it_accountpayable, it_accounttax.
 
 *REF_DOC_NO BKPF-XBLNR is the key in the odata service
 * we should check that the Timesheet is unique since the GET_ENTITYSET performs a select single

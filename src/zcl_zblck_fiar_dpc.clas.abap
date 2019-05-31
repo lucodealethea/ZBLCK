@@ -1,4 +1,4 @@
-class ZCL_ZBLCK_FIAP_01_DPC definition
+class ZCL_ZBLCK_FIAR_DPC definition
   public
   inheriting from /IWBEP/CL_MGW_PUSH_ABS_DATA
   abstract
@@ -33,7 +33,7 @@ protected section.
       !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
       !IO_DATA_PROVIDER type ref to /IWBEP/IF_MGW_ENTRY_PROVIDER optional
     exporting
-      !ER_ENTITY type ZCL_ZBLCK_FIAP_01_MPC=>TS_POSTHDR
+      !ER_ENTITY type ZCL_ZBLCK_FIAR_MPC=>TS_POSTHDR
     raising
       /IWBEP/CX_MGW_BUSI_EXCEPTION
       /IWBEP/CX_MGW_TECH_EXCEPTION .
@@ -58,7 +58,7 @@ protected section.
       !IO_TECH_REQUEST_CONTEXT type ref to /IWBEP/IF_MGW_REQ_ENTITY optional
       !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
     exporting
-      !ER_ENTITY type ZCL_ZBLCK_FIAP_01_MPC=>TS_POSTHDR
+      !ER_ENTITY type ZCL_ZBLCK_FIAR_MPC=>TS_POSTHDR
       !ES_RESPONSE_CONTEXT type /IWBEP/IF_MGW_APPL_SRV_RUNTIME=>TY_S_MGW_RESPONSE_ENTITY_CNTXT
     raising
       /IWBEP/CX_MGW_BUSI_EXCEPTION
@@ -77,7 +77,7 @@ protected section.
       !IV_SEARCH_STRING type STRING
       !IO_TECH_REQUEST_CONTEXT type ref to /IWBEP/IF_MGW_REQ_ENTITYSET optional
     exporting
-      !ET_ENTITYSET type ZCL_ZBLCK_FIAP_01_MPC=>TT_POSTHDR
+      !ET_ENTITYSET type ZCL_ZBLCK_FIAR_MPC=>TT_POSTHDR
       !ES_RESPONSE_CONTEXT type /IWBEP/IF_MGW_APPL_SRV_RUNTIME=>TY_S_MGW_RESPONSE_CONTEXT
     raising
       /IWBEP/CX_MGW_BUSI_EXCEPTION
@@ -92,7 +92,7 @@ protected section.
       !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
       !IO_DATA_PROVIDER type ref to /IWBEP/IF_MGW_ENTRY_PROVIDER optional
     exporting
-      !ER_ENTITY type ZCL_ZBLCK_FIAP_01_MPC=>TS_POSTHDR
+      !ER_ENTITY type ZCL_ZBLCK_FIAR_MPC=>TS_POSTHDR
     raising
       /IWBEP/CX_MGW_BUSI_EXCEPTION
       /IWBEP/CX_MGW_TECH_EXCEPTION .
@@ -104,20 +104,20 @@ ENDCLASS.
 
 
 
-CLASS ZCL_ZBLCK_FIAP_01_DPC IMPLEMENTATION.
+CLASS ZCL_ZBLCK_FIAR_DPC IMPLEMENTATION.
 
 
   method /IWBEP/IF_MGW_APPL_SRV_RUNTIME~CREATE_ENTITY.
 *&----------------------------------------------------------------------------------------------*
 *&  Include           /IWBEP/DPC_TEMP_CRT_ENTITY_BASE
-*&* This class has been generated on 29.05.2019 07:10:27 in client 100
+*&* This class has been generated on 29.05.2019 13:50:07 in client 100
 *&*
 *&*       WARNING--> NEVER MODIFY THIS CLASS <--WARNING
 *&*   If you want to change the DPC implementation, use the
-*&*   generated methods inside the DPC provider subclass - ZCL_ZBLCK_FIAP_01_DPC_EXT
+*&*   generated methods inside the DPC provider subclass - ZCL_ZBLCK_FIAR_DPC_EXT
 *&-----------------------------------------------------------------------------------------------*
 
- DATA posthdrset_create_entity TYPE zcl_zblck_fiap_01_mpc=>ts_posthdr.
+ DATA posthdrset_create_entity TYPE zcl_zblck_fiar_mpc=>ts_posthdr.
  DATA lv_entityset_name TYPE string.
 
 lv_entityset_name = io_tech_request_context->get_entity_set_name( ).
@@ -165,11 +165,11 @@ ENDCASE.
   method /IWBEP/IF_MGW_APPL_SRV_RUNTIME~DELETE_ENTITY.
 *&----------------------------------------------------------------------------------------------*
 *&  Include           /IWBEP/DPC_TEMP_DEL_ENTITY_BASE
-*&* This class has been generated on 29.05.2019 07:10:27 in client 100
+*&* This class has been generated on 29.05.2019 13:50:07 in client 100
 *&*
 *&*       WARNING--> NEVER MODIFY THIS CLASS <--WARNING
 *&*   If you want to change the DPC implementation, use the
-*&*   generated methods inside the DPC provider subclass - ZCL_ZBLCK_FIAP_01_DPC_EXT
+*&*   generated methods inside the DPC provider subclass - ZCL_ZBLCK_FIAR_DPC_EXT
 *&-----------------------------------------------------------------------------------------------*
 
  DATA lv_entityset_name TYPE string.
@@ -207,14 +207,14 @@ CASE lv_entityset_name.
   method /IWBEP/IF_MGW_APPL_SRV_RUNTIME~GET_ENTITY.
 *&-----------------------------------------------------------------------------------------------*
 *&  Include           /IWBEP/DPC_TEMP_GETENTITY_BASE
-*&* This class has been generated  on 29.05.2019 07:10:27 in client 100
+*&* This class has been generated  on 29.05.2019 13:50:07 in client 100
 *&*
 *&*       WARNING--> NEVER MODIFY THIS CLASS <--WARNING
 *&*   If you want to change the DPC implementation, use the
-*&*   generated methods inside the DPC provider subclass - ZCL_ZBLCK_FIAP_01_DPC_EXT
+*&*   generated methods inside the DPC provider subclass - ZCL_ZBLCK_FIAR_DPC_EXT
 *&-----------------------------------------------------------------------------------------------*
 
- DATA posthdrset_get_entity TYPE zcl_zblck_fiap_01_mpc=>ts_posthdr.
+ DATA posthdrset_get_entity TYPE zcl_zblck_fiar_mpc=>ts_posthdr.
  DATA lv_entityset_name TYPE string.
  DATA lr_entity TYPE REF TO data.       "#EC NEEDED
 
@@ -268,13 +268,13 @@ CASE lv_entityset_name.
   method /IWBEP/IF_MGW_APPL_SRV_RUNTIME~GET_ENTITYSET.
 *&----------------------------------------------------------------------------------------------*
 *&  Include           /IWBEP/DPC_TMP_ENTITYSET_BASE
-*&* This class has been generated on 29.05.2019 07:10:27 in client 100
+*&* This class has been generated on 29.05.2019 13:50:07 in client 100
 *&*
 *&*       WARNING--> NEVER MODIFY THIS CLASS <--WARNING
 *&*   If you want to change the DPC implementation, use the
-*&*   generated methods inside the DPC provider subclass - ZCL_ZBLCK_FIAP_01_DPC_EXT
+*&*   generated methods inside the DPC provider subclass - ZCL_ZBLCK_FIAR_DPC_EXT
 *&-----------------------------------------------------------------------------------------------*
- DATA posthdrset_get_entityset TYPE zcl_zblck_fiap_01_mpc=>tt_posthdr.
+ DATA posthdrset_get_entityset TYPE zcl_zblck_fiar_mpc=>tt_posthdr.
  DATA lv_entityset_name TYPE string.
 
 lv_entityset_name = io_tech_request_context->get_entity_set_name( ).
@@ -333,14 +333,14 @@ CASE lv_entityset_name.
   method /IWBEP/IF_MGW_APPL_SRV_RUNTIME~UPDATE_ENTITY.
 *&----------------------------------------------------------------------------------------------*
 *&  Include           /IWBEP/DPC_TEMP_UPD_ENTITY_BASE
-*&* This class has been generated on 29.05.2019 07:10:27 in client 100
+*&* This class has been generated on 29.05.2019 13:50:07 in client 100
 *&*
 *&*       WARNING--> NEVER MODIFY THIS CLASS <--WARNING
 *&*   If you want to change the DPC implementation, use the
-*&*   generated methods inside the DPC provider subclass - ZCL_ZBLCK_FIAP_01_DPC_EXT
+*&*   generated methods inside the DPC provider subclass - ZCL_ZBLCK_FIAR_DPC_EXT
 *&-----------------------------------------------------------------------------------------------*
 
- DATA posthdrset_update_entity TYPE zcl_zblck_fiap_01_mpc=>ts_posthdr.
+ DATA posthdrset_update_entity TYPE zcl_zblck_fiar_mpc=>ts_posthdr.
  DATA lv_entityset_name TYPE string.
  DATA lr_entity TYPE REF TO data. "#EC NEEDED
 

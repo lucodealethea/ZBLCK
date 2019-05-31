@@ -13,6 +13,15 @@ protected section.
   methods POSTHDRSET_CREATE_ENTITY
     redefinition .
 private section.
+
+  methods _RAISE_BAPI_MESSAGES
+    importing
+      !IV_AC_DOC_NO type BELNR_D
+      !IV_ENTITY type STRING
+      !IS_RETURN type BAPIRET1
+      !IT_RETURN type TY_T_BAPI_CORU_RETURN
+    raising
+      /IWBEP/CX_MGW_BUSI_EXCEPTION .
 ENDCLASS.
 
 
@@ -30,9 +39,10 @@ DATA: lv_rfc_name TYPE tfdir-funcname,
 
 DATA: ls_header TYPE zbapi_acc_post_ap,
 *      ls_posthdrap LIKE er_entity,  "or better, as below data declaration more transparent
-      lt_return TYPE STANDARD TABLE OF bapiret2.
+      lt_return TYPE STANDARD TABLE OF bapiret2,
+      ls_return TYPE bapiret1.
 
-DATA: ls_posthdrap TYPE zcl_zdir_on_hdr_mpc=>ts_posthdr.
+DATA: ls_posthdrap TYPE zcl_zblck_fiap_01_mpc=>ts_posthdr.
 
 DATA: l_type TYPE bapiache09-obj_type,
       l_key  TYPE bapiache09-obj_key,
@@ -86,6 +96,14 @@ EXCEPTIONS
       lv_subrc = 1001.
       lv_exc_msg = lx_root->if_message~get_text( ).
 
+* Report BAPI errors
+*  _raise_bapi_messages(
+*    EXPORTING IV_AC_DOC_NO  = l_key(10)
+*              iv_entity     = 'FIAPInvoiceCreationConfirmation'
+*              is_return     = ls_return "BAPIRET1
+*              it_return     = lt_return ). "BAPIRET2 <>
+
+
 IF lt_return IS NOT INITIAL.
    mo_context->get_message_container( )->add_messages_from_bapi(
    it_bapi_messages = lt_return
@@ -131,8 +149,8 @@ METHOD posthdrset_get_entity.
 
     DATA: lt_keys       TYPE /iwbep/t_mgw_tech_pairs,
           ls_key        TYPE /iwbep/s_mgw_tech_pair,
-          ls_bp_key     TYPE zcl_zdir_on_hdr_mpc=>ts_posthdr-ref_doc_no,
-          ls_headerdata TYPE zcl_zdir_on_hdr_mpc=>ts_posthdr.
+          ls_bp_key     TYPE zcl_zblck_fiap_01_mpc=>ts_posthdr-ref_doc_no,
+          ls_headerdata TYPE zcl_zblck_fiap_01_mpc=>ts_posthdr.
 
     CALL METHOD io_tech_request_context->get_converted_keys
       IMPORTING
@@ -211,4 +229,8 @@ CLEAR es_response_context-inlinecount.
 ENDIF.
 
 ENDMETHOD.
+
+
+  method _RAISE_BAPI_MESSAGES.
+  endmethod.
 ENDCLASS.

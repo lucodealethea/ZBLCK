@@ -1,4 +1,4 @@
-class ZCL_ZBLCK_FIAP_01_MPC definition
+class ZCL_ZBLCK_FIAR_MPC definition
   public
   inheriting from /IWBEP/CL_MGW_PUSH_ABS_MODEL
   create public .
@@ -6,7 +6,7 @@ class ZCL_ZBLCK_FIAP_01_MPC definition
 public section.
 
   types:
-     TS_POSTHDR type ZBAPI_ACC_POST_AP .
+     TS_POSTHDR type ZBAPI_ACC_POST_AR .
   types:
 TT_POSTHDR type standard table of TS_POSTHDR .
   types:
@@ -36,7 +36,7 @@ TT_POSTHDR type standard table of TS_POSTHDR .
 protected section.
 private section.
 
-  constants GC_INCL_NAME type STRING value 'ZCL_ZBLCK_FIAP_01_MPC=========CP' ##NO_TEXT.
+  constants GC_INCL_NAME type STRING value 'ZCL_ZBLCK_FIAR_MPC============CP' ##NO_TEXT.
 
   methods DEFINE_POSTHDR
     raising
@@ -45,7 +45,7 @@ ENDCLASS.
 
 
 
-CLASS ZCL_ZBLCK_FIAP_01_MPC IMPLEMENTATION.
+CLASS ZCL_ZBLCK_FIAR_MPC IMPLEMENTATION.
 
 
   method DEFINE.
@@ -57,7 +57,7 @@ CLASS ZCL_ZBLCK_FIAP_01_MPC IMPLEMENTATION.
 *&                                                                     &*
 *&---------------------------------------------------------------------*
 
-model->set_schema_namespace( 'ZBLCK_FIAP_SRV_01' ).
+model->set_schema_namespace( 'ZBLCK_FIAR_SRV' ).
 
 define_posthdr( ).
   endmethod.
@@ -203,7 +203,6 @@ lo_property->/iwbep/if_mgw_odata_annotatabl~create_annotation( 'sap' )->add(
         iv_key      = 'unicode'
         iv_value    = 'false' ).
 lo_property = lo_entity_type->create_property( iv_property_name = 'RefDocNo' iv_abap_fieldname = 'REF_DOC_NO' ). "#EC NOTEXT
-lo_property->set_label_from_text_element( iv_text_element_symbol = '004' iv_text_element_container = gc_incl_name ).  "#EC NOTEXT
 lo_property->set_is_key( ).
 lo_property->set_type_edm_string( ).
 lo_property->set_maxlength( iv_max_length = 16 ). "#EC NOTEXT
@@ -230,7 +229,7 @@ lo_property->/iwbep/if_mgw_odata_annotatabl~create_annotation( 'sap' )->add(
         iv_key      = 'unicode'
         iv_value    = 'false' ).
 lo_property = lo_entity_type->create_property( iv_property_name = 'GlAccountTx' iv_abap_fieldname = 'GL_ACCOUNT_TX' ). "#EC NOTEXT
-lo_property->set_label_from_text_element( iv_text_element_symbol = '005' iv_text_element_container = gc_incl_name ).  "#EC NOTEXT
+lo_property->set_label_from_text_element( iv_text_element_symbol = '004' iv_text_element_container = gc_incl_name ).  "#EC NOTEXT
 lo_property->set_type_edm_string( ).
 lo_property->set_maxlength( iv_max_length = 10 ). "#EC NOTEXT
 lo_property->set_conversion_exit( 'ALPHA' ). "#EC NOTEXT
@@ -294,7 +293,7 @@ lo_property->/iwbep/if_mgw_odata_annotatabl~create_annotation( 'sap' )->add(
       EXPORTING
         iv_key      = 'unicode'
         iv_value    = 'false' ).
-lo_property = lo_entity_type->create_property( iv_property_name = 'VendorNo' iv_abap_fieldname = 'VENDOR_NO' ). "#EC NOTEXT
+lo_property = lo_entity_type->create_property( iv_property_name = 'Customer' iv_abap_fieldname = 'CUSTOMER' ). "#EC NOTEXT
 lo_property->set_type_edm_string( ).
 lo_property->set_maxlength( iv_max_length = 10 ). "#EC NOTEXT
 lo_property->set_conversion_exit( 'ALPHA' ). "#EC NOTEXT
@@ -370,7 +369,7 @@ lo_property->/iwbep/if_mgw_odata_annotatabl~create_annotation( 'sap' )->add(
         iv_key      = 'unicode'
         iv_value    = 'false' ).
 
-lo_entity_type->bind_structure( iv_structure_name   = 'ZBAPI_ACC_POST_AP'
+lo_entity_type->bind_structure( iv_structure_name   = 'ZBAPI_ACC_POST_AR'
                                 iv_bind_conversions = 'X' ). "#EC NOTEXT
 
 
@@ -401,7 +400,7 @@ lo_entity_set->set_filter_required( abap_false ).
 *&---------------------------------------------------------------------*
 
 
-  CONSTANTS: lc_gen_date_time TYPE timestamp VALUE '20190529071023'.                  "#EC NOTEXT
+  CONSTANTS: lc_gen_date_time TYPE timestamp VALUE '20190529135005'.                  "#EC NOTEXT
   rv_last_modified = super->get_last_modified( ).
   IF rv_last_modified LT lc_gen_date_time.
     rv_last_modified = lc_gen_date_time.
@@ -446,18 +445,11 @@ ls_text_element-parent_artifact_type   = 'ETYP'.                                
 ls_text_element-text_symbol            = '003'.              "#EC NOTEXT
 APPEND ls_text_element TO rt_text_elements.
 clear ls_text_element.
-ls_text_element-artifact_name          = 'RefDocNo'.                 "#EC NOTEXT
-ls_text_element-artifact_type          = 'PROP'.                                       "#EC NOTEXT
-ls_text_element-parent_artifact_name   = 'PostHdr'.                            "#EC NOTEXT
-ls_text_element-parent_artifact_type   = 'ETYP'.                                       "#EC NOTEXT
-ls_text_element-text_symbol            = '004'.              "#EC NOTEXT
-APPEND ls_text_element TO rt_text_elements.
-clear ls_text_element.
 ls_text_element-artifact_name          = 'GlAccountTx'.                 "#EC NOTEXT
 ls_text_element-artifact_type          = 'PROP'.                                       "#EC NOTEXT
 ls_text_element-parent_artifact_name   = 'PostHdr'.                            "#EC NOTEXT
 ls_text_element-parent_artifact_type   = 'ETYP'.                                       "#EC NOTEXT
-ls_text_element-text_symbol            = '005'.              "#EC NOTEXT
+ls_text_element-text_symbol            = '004'.              "#EC NOTEXT
 APPEND ls_text_element TO rt_text_elements.
   endmethod.
 ENDCLASS.
